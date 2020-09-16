@@ -1,0 +1,32 @@
+body {
+    margin: 0 auto
+    padding: 10px;
+    background: grey;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, 
+p { 
+    text-align: center;
+
+}
+
+#here li {
+    width: 10vw;
+    padding: 20px;
+    border: 1px solid #000;
+
+}
+button {
+    color: #fff;
+    background: green; 
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
