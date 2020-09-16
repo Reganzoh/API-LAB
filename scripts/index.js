@@ -21,7 +21,20 @@ function createListElement() {
         
         //if the item is clicked (li add event listner) then 
         // finished is true
+        if (finished) {
+            removeButton.appendChild(document.createTextNode("remove"));
+            removeButton.classList = "deleteButton";
+            li.appendChild(removeButton);
+
+            removeButton.addEventListener("click", function () {
+                this.parentElement.remove();
+            });
         
-    }
-    )
+        }else {
+            this.getElementByClassName("deleteButton")[0].remove();
+        }
+    });
+    //revert input value back to nothing
+    input.value = "";
+    
 }
