@@ -28,5 +28,30 @@ button {
     border-radius: 5px;
 }
 
+body {
+    background: #f9f9f9;
+    background-size: cover;
+    text-align: center;
+}
 
+input {
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 200px;
+}
+
+.testingIt {
+    text-decoration-line: line-through;
+}
+
+.deleteButton {
+    background-color: red;
+    color: #fff;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+.done {
+    text-decoration: #ff3c3c;
+}
 
