@@ -3,7 +3,7 @@ var input = document.getElementById("input");
 var ul = document.querySelector("ul");
 
 function inputLength() {
-    return input.nodeValue.length;
+    return input.value.length;
 }
 
 function createListElement() {
@@ -14,11 +14,11 @@ function createListElement() {
     li.addEventListener("click", function () {
         //creates a boolean that toggles the done class on li:
         // if the list item is clicked this toggels the done class
-        var finished = this.classList.toggle("done"); 
+        var finished = this.classList.toggle("done");
         // creates a remove button fot the finished item:
         var removeButton = document.createElement("button");
         removeButton.classList.add("deleteButton");
-        
+
         //if the item is clicked (li add event listner) then 
         // finished is true
         if (finished) {
@@ -29,26 +29,27 @@ function createListElement() {
             removeButton.addEventListener("click", function () {
                 this.parentElement.remove();
             });
-        
-        }else {
+
+        } else {
             this.getElementByClassName("deleteButton")[0].remove();
         }
     });
     //revert input value back to nothing
     input.value = "";
+}
+function addListAfterClick() {
+    if (inputLength() > 0) {
+        createListElement();
     }
-    function addListAfterClick() {
-        if (inputLength() > 0) {
-            createListElement();
-        }
+
     function addListAfterPress(event) {
-        if (inputLength() > 0 && event.keyCode == 13) {
+        if (inputLength() > 0 && event.keyCode === 13) {
             createListElement();
         }
-    } 
-    button.addEventListener("click", addListAfterClick);
-    
-    input.addEventListener("keypress", addListAfterPress); 
-    
     }
+    button.addEventListener("click", addListAfterClick);
+
+    input.addEventListener("keypress", addListAfterPress);
+
+}
 
